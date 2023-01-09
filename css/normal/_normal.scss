@@ -1,0 +1,168 @@
+main {
+    @include leftRightElements (80vw, 90vh, white);
+
+    margin: 25px auto;
+
+    section {
+        .content {
+            @include leftRightElements (100%, 45vh, white);
+            display: flex;
+
+            .leftContent {
+                @include leftRightElements (40%, inherit, white);
+
+                h1 {
+                    font-weight: $headingFontWeight;
+                    font-family: $paragraphFontFamily;
+                    font-size: 50px;
+                    width: 450px;
+                    line-height: 50px;
+                    color: $headingColor;
+                    margin-top: 30px;
+                }
+
+                p {
+                    font-family: $paragraphFontFamily;
+                    font-weight: $firstParagraphFontWeight;
+                    width: 430px;
+                    color: $firstTextColor;
+                    margin-top: 20px;
+
+                }
+            }
+
+            .rightContent {
+                @include leftRightElements (40%, inherit, transparent);
+
+                .starElement {
+                    @include leftRightElements (370px, 33px, $starDivColor);
+                    border-radius: 4px;
+                    margin-top: 15px;
+                    margin-left: 60px;
+
+                    i {
+                        margin-top: 5px;
+                        color: $starColor;
+                    }
+
+                    #star {
+                        margin-left: 20px;
+                    }
+
+                    span {
+                        font-family: $paragraphFontFamily;
+                        margin-left: 20px;
+                        color: $firstTextColor;
+                        font-weight: 600;
+                        font-size: 15px;
+
+                    }
+
+                }
+
+                #starElementOne {
+                    margin-top: 40px;
+                }
+
+                #starElementTwo {
+                    margin-left: 100px;
+                }
+
+                #starElementThree {
+                    margin-left: 140px;
+                }
+
+            }
+        }
+    }
+
+    section {
+        .profileDiv {
+            @include leftRightElements (100%, 45vh, white);
+            display: flex;
+            font-family: $paragraphFontFamily;
+
+            .profileBox {
+                @include leftRightElements (280px, 250px, $underDivColor);
+                margin-left: 20px;
+                border-radius: 8px;
+
+                .profileName {
+                    width: 80%;
+                    height: 20px;
+                    margin: 20px auto;
+                    display: flex;
+
+                    // justify-content: space-evenly;
+
+                    .profilePic {
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid black;
+                        border-radius: 50%;
+                    }
+
+                    .names {
+                        font-size: 20px;
+                        margin-left: 15px;
+                        line-height: 19px;
+
+
+                        .verified {
+                            color: $h6Color;
+                        }
+
+                        .name {
+                            color: $paragraphColor;
+                        }
+
+                    }
+
+
+
+                    #picOne {
+                        background-image: url(/Images/Man.jpg);
+                        @include imageStyle;
+
+                    }
+
+                    #picTwo {
+                        background-image: url(/Images/firstWoman.jpg);
+                        @include imageStyle;
+
+                    }
+
+                    #picThree {
+                        background-image: url(/Images/secondWoman.jpg);
+                        @include imageStyle;
+                    }
+                }
+
+                .textDiv {
+                    margin: 40px auto auto 20px;
+
+                    p {
+                        color: $paragraphColor;
+                        width: 220px;
+                        font-size: 14px;
+
+                    }
+                }
+
+            }
+
+            #boxOne {
+                margin-left: 0;
+                margin-top: -10px;
+            }
+
+            #boxTwo {
+                margin-top: 20px;
+            }
+
+            #boxThree {
+                margin-top: 40px;
+            }
+        }
+    }
+}

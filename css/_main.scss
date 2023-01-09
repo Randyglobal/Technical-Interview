@@ -1,0 +1,176 @@
+main {
+    //including the mixin
+    @include leftRightElements (80vw, 90vh, white);
+
+    margin: 25px auto;
+
+    section {
+        .content {
+            //including the mixin
+
+            @include leftRightElements (100%, 45vh, white);
+            //placing the elements inline with display: flex;
+            display: flex;
+
+            .leftContent {
+                @include leftRightElements (50%, inherit, white);
+
+                h1 {
+                    font-weight: $headingFontWeight;
+                    font-family: $paragraphFontFamily;
+                    font-size: 70px;
+                    width: 490px;
+                    line-height: 60px;
+                    color: $headingColor;
+                    margin-top: 30px;
+                }
+
+                p {
+                    font-family: $paragraphFontFamily;
+                    font-weight: $firstParagraphFontWeight;
+                    width: 430px;
+                    color: $firstTextColor;
+                    margin-top: 20px;
+
+                }
+            }
+
+            .rightContent{
+                @include leftRightElements (50%, inherit, white);
+
+                .starElement {
+                    @include leftRightElements (370px, 33px, $starDivColor);
+                    border-radius: 4px;
+                    margin-top: 15px;
+                    margin-left: 60px;
+
+                    i {
+                        margin-top: 5px;
+                        color: $starColor;
+                    }
+
+                    #star {
+                        margin-left: 20px;
+                    }
+
+                    span {
+                        font-family: $paragraphFontFamily;
+                        margin-left: 20px;
+                        color: $firstTextColor;
+                        font-weight: 600;
+                        font-size: 15px;
+
+                    }
+
+                }
+
+                #starElementOne {
+                    margin-top: 40px;
+                }
+
+                #starElementTwo {
+                    margin-left: 100px;
+                }
+
+                #starElementThree {
+                    margin-left: 140px;
+                }
+
+            }
+        }
+    }
+
+    section {
+        .profileDiv {
+            @include leftRightElements (100%, 50vh, white);
+            display: flex;
+            font-family: $paragraphFontFamily;
+
+            .profileBox {
+                @include leftRightElements (330px, 200px, $underDivColor);
+                margin-left: 40px;
+                border-radius: 8px;
+                margin-top: 40px;
+            }
+
+                .profileName {
+                    width: 80%;
+                    height: 20px;
+                    margin: 20px auto;
+                    display: flex;
+
+                    // justify-content: space-evenly;
+
+                    .profilePic {
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid black;
+                        border-radius: 50%;
+                    }
+
+                    .names {
+                        font-size: 20px;
+                        margin-left: 15px;
+                        line-height: 19px;
+
+
+                        .verified {
+                            color: $h6Color;
+                        }
+
+                        .name {
+                            color: $paragraphColor;
+                        }
+
+                    }
+
+
+
+                    #picOne {
+                        background-image: url(/Images/Man.jpg);
+                        @include imageStyle;
+
+                    }
+
+                    #picTwo {
+                        background-image: url(/Images/firstWoman.jpg);
+                        @include imageStyle;
+
+                    }
+
+                    #picThree {
+                        background-image: url(/Images/secondWoman.jpg);
+                        @include imageStyle;
+                    }
+                }
+
+                .textDiv {
+                    margin: 40px auto auto 40px;
+
+                    p {
+                        color: $paragraphColor;
+                        width: 260px;
+                        font-size: 14px;
+
+                    }
+                }
+
+            }
+
+            #boxOne {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            #boxTwo {
+                margin-top:35px;
+            }
+
+            #boxThree {
+                margin-top: 60px;
+            }
+        }
+    }
+
+
+

@@ -1,0 +1,26 @@
+@import './setup';
+@import './variables';
+
+@mixin leftRightElements ($width, $height, $background){
+    width: $width;
+    height: $height;
+    background: $background;
+}
+@mixin imageStyle{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@import './main';
+
+@media (max-width: 1200px){
+    @import './normal/normal';
+};
+
+@media (max-width: 900px){
+    @import './tablet/tablet';
+};
+
+@media (max-width: 576px) {
+    @import './media/mobile';
+};

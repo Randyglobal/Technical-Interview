@@ -1,0 +1,195 @@
+main {
+    @include leftRightElements (100%, 90vh, white);
+
+    section {
+        .content {
+            @include leftRightElements (100%, 30vh, white);
+            display: block;
+
+            .leftContent {
+                @include leftRightElements (100%, inherit, white);
+                margin-top: 70px;
+
+                h1 {
+                    // align-items: center;
+                    font-weight: $headingFontWeight;
+                    font-family: $paragraphFontFamily;
+                    font-size: 50px;
+                    text-align: center;
+                    width: 90%;
+                    line-height: 50px;
+                    color: $headingColor;
+                }
+
+                p {
+                    text-align: center;
+                    font-family: $paragraphFontFamily;
+                    font-weight: $firstParagraphFontWeight;
+                    width: 100%;
+                    font-size: 20px;
+                    color: $firstTextColor;
+                    margin-left: 0px;
+                }
+
+                #paragraph {
+                    margin-top: 20px
+                }
+            }
+
+            .rightContent {
+                @include leftRightElements (100%, inherit, white);
+                // margin-left: 30px;
+
+                .starElement {
+                    @include leftRightElements (90%, 33px, $starDivColor);
+                    border-radius: 4px;
+                    margin-top: 20px;
+                    align-items: center;
+                    padding: 10px;
+                    margin-left: 10px;
+
+                    i {
+                        margin-top: 5px;
+                        color: $starColor;
+                        margin-left: 5px;
+                    }
+
+                    // #star{
+                    //     margin-left: 20px;
+                    // }
+                    span {
+                        font-family: $paragraphFontFamily;
+                        margin-left: 10px;
+                        color: $firstTextColor;
+                        font-weight: 600;
+                        font-size: 15px;
+
+                    }
+
+                }
+
+                #starElementOne {
+                    margin-top: 70px;
+                    margin-left: 0px;
+                }
+
+                #starElementTwo {
+                    margin-left: 0px;
+                }
+
+                #starElementThree {
+                    margin-left: 0px;
+                }
+
+            }
+        }
+    }
+
+    section {
+        .profileDiv {
+            @include leftRightElements (100%, 45vh, white);
+            display: block;
+            align-items: center;
+            margin-left: 0px;
+            margin-top: 210px;
+            font-family: $paragraphFontFamily;
+
+            .profileBox {
+                @include leftRightElements (330px, 200px, $underDivColor);
+                border-radius: 8px;
+
+                .profileName {
+                    width: 80%;
+                    height: 20px;
+                    margin: 20px auto;
+                    display: flex;
+
+                    // justify-content: space-evenly;
+
+                    .profilePic {
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid black;
+                        border-radius: 50%;
+                    }
+
+                    .names {
+                        font-size: 20px;
+                        margin-left: 15px;
+                        line-height: 19px;
+                        margin-top: 20px;
+
+
+
+                        .verified {
+                            color: $h6Color;
+                        }
+
+                        .name {
+                            color: $paragraphColor;
+                        }
+
+                    }
+
+
+
+
+                    #picOne {
+                        background-image: url(/Images/Man.jpg);
+                        @include imageStyle;
+                        margin-top: 20px;
+
+                    }
+
+                    #picTwo {
+                        background-image: url(/Images/firstWoman.jpg);
+                        @include imageStyle;
+                        margin-top: 20px;
+
+
+                    }
+
+                    #picThree {
+                        background-image: url(/Images/secondWoman.jpg);
+                        @include imageStyle;
+                        margin-top: 20px;
+
+                    }
+                }
+
+                .textDiv {
+                    margin: 50px auto auto 40px;
+
+                    p {
+                        color: $paragraphColor;
+                        width: 260px;
+                        font-size: 14px;
+
+                    }
+
+                }
+
+            }
+
+            #boxOne {
+                margin-top: 20rem;
+                margin-left: 15px;
+            }
+
+            #boxTwo {
+                margin-top: 20px;
+                margin-left: 15px;
+
+
+            }
+
+            #boxThree {
+                margin-top: 20px;
+                margin-left: 15px;
+
+
+            }
+
+        }
+    }
+}
